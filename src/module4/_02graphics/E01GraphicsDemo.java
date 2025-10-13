@@ -1,36 +1,46 @@
 package module4._02graphics;
 
 import java.awt.Color;
-
 import edu.princeton.cs.introcs.StdDraw;
 
 public class E01GraphicsDemo {
 
-	/*
-	 * Exercise: use the StdDraw API to draw the requested
-	 * items below.
-	 */
-	public static void main(String[] args) {
-		//Using a built-in color
-		StdDraw.setPenColor(Color.GREEN);
-		StdDraw.filledSquare(0.5, 0.5, .2);
-		
-		//Using a custom color
-		Color purply = new Color(255, 0, 150);
-		StdDraw.setPenColor(purply);
-		StdDraw.filledCircle(.75, .75, .1);
-		
-		//Use the StdDraw API to do the following:
-		
-		//Draw a blue point anywhere you like
-		
-		//Draw a larger green point someplace else
+    /*
+     * Exercise: use the StdDraw API to draw the requested
+     * items below.
+     */
+    public static void main(String[] args) {
+        // Using a built-in color
+        StdDraw.setPenColor(Color.GREEN);
+        StdDraw.filledSquare(0.5, 0.5, .2);
 
-		//Draw an unfilled red triangle somewhere
+        // Using a custom color
+        Color purply = new Color(255, 0, 150);
+        StdDraw.setPenColor(purply);
+        StdDraw.filledCircle(.75, .75, .1);
 
-		//Draw a filled yellow circle somewhere
+        // Draw a blue point anywhere you like
+        StdDraw.setPenColor(Color.BLUE);
+        StdDraw.point(0.2, 0.3);
 
-		//Draw a filled blue rectangle somewhere
+        // Draw a larger green point someplace else
+        StdDraw.setPenColor(Color.GREEN);
+        StdDraw.setPenRadius(0.02); // default is 0.002
+        StdDraw.point(0.8, 0.3);
+        StdDraw.setPenRadius(); // reset pen radius to default
 
-	}
+        // Draw an unfilled red triangle somewhere
+        StdDraw.setPenColor(Color.RED);
+        double[] x = {0.2, 0.4, 0.3};
+        double[] y = {0.7, 0.7, 0.9};
+        StdDraw.polygon(x, y);
+
+        // Draw a filled yellow circle somewhere
+        StdDraw.setPenColor(Color.YELLOW);
+        StdDraw.filledCircle(0.6, 0.2, 0.1);
+
+        // Draw a filled blue rectangle somewhere
+        StdDraw.setPenColor(Color.BLUE);
+        StdDraw.filledRectangle(0.3, 0.2, 0.1, 0.05);
+    }
 }
