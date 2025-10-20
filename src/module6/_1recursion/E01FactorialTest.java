@@ -7,9 +7,9 @@ package module6._1recursion;
 public class E01FactorialTest {
 
 	public static int factorial(int n) {
-		if(n == 0) {
+		if(n == 0) { // base case
 			return 1;
-		} else {
+		} else { //recursive call
 			return n * factorial(n - 1);
 		}
 	}

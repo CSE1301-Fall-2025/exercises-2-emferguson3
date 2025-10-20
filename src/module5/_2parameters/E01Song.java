@@ -23,6 +23,7 @@ public class E01Song {
 	public static void main(String[] args) {
 		verse( "cow" , "moo" );
 		verse( "duck" , "quack" );
+		verse( "cat" , "meow" );
 	}
 }
 
